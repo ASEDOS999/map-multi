@@ -1,4 +1,4 @@
-    (define (problem BLOCKS-1-3) (:domain blocks)
+(define (problem BLOCKS-1-3) (:domain blocks)
 (:objects
 	a - block
 	c - block
@@ -12,12 +12,14 @@
 (:init
 	(handempty a1)
 	(handempty a2)
+	(clear c)
 	(clear a)
+	(clear b)
 	(clear d)
 	(ontable c)
+	(ontable a)
+	(ontable b)
 	(ontable d)
-	(on a b)
-	(on b c)
 	(blocktype big a)
 	(blocktype small b)
 	(blocktype big c)
@@ -25,9 +27,9 @@
 )
 (:goal
 	(and
+	    (clear d)
 	    (handempty a1)
 	    (handempty a2)
-	    (clear d)
 		(on d c)
 		(on c b)
 		(on b a)
@@ -52,5 +54,4 @@
     )
 )
 )
-
 
